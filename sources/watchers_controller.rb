@@ -19,12 +19,12 @@ class WatchersController < ApplicationController
   layout 'base'
   before_filter :require_login, :find_project, :check_project_privacy
   
-  def remove
-    user = User.current
-    @watched.remove_watcher(user)
+  def remove_watcher
+    watcher = User.current
+    @watched.remove_watcher(watcher)
     respond_to do |format|
       format.html { render :text => 'Watcher removed.', :layout => true }
-      format.js { render(:update) {|page| page.replace_html 'watcher', watcher_link(@watched, user)} }
+      format.js { render(:update) {|page| page.replace_html 'watcher', watcher_link(@watched, watcher)} }
     end
   end
 
