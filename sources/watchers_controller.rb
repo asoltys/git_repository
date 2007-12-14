@@ -30,7 +30,7 @@ class WatchersController < ApplicationController
 
 private
   def find_project
-    klass = Object.const_get(params[:object_type].camelcase)
+    klass = Object.const_get(params[:object_type])
     return true unless klass.respond_to?('watched_by')
     @watched = klass.find(params[:object_id])
     @project = @watched.project
