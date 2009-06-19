@@ -1,4 +1,4 @@
-Mercurial test repository
+Git test repository
 
-Mercurial is a distributed version control system. Mercurial is dedicated to speed and efficiency with a sane user interface.
-It is written in Python.
+Git is a distributed version control system. Git is dedicated to speed and efficiency with a sane user interface.
+It is written in C.
